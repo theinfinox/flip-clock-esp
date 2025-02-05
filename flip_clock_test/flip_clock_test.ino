@@ -27,10 +27,8 @@ char password[] = "raspberry"; // Replace with your Wi-Fi password
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org", 19800, 60000); // IST (GMT+5:30)
 
-// Bitmap placeholders for 0-9 and AM/PM (using the same 24x30 placeholder)
 const uint8_t* getDigitBitmap(int digit) {
-  // Simplified version, using default placeholder for digits and AM/PM
-  // Replace with real bitmaps as needed
+
 
 
 // Bitmap placeholders for 0-9 and AM/PM characters
@@ -107,7 +105,7 @@ static const uint8_t pmBitmap[] PROGMEM = { 0x1f, 0xff, 0xf0, 0x3f, 0xff, 0xf8, 
 0x7f, 0xfc, 0x7f, 0xff, 0xfc, 0x7f, 0xff, 0xfc, 0x7f, 0xff, 0xfc, 0x7f, 0xff, 0xfc, 0x7f, 0xff, 
 0xfc, 0x7f, 0xff, 0xfc, 0x3f, 0xff, 0xf8, 0x1f, 0xff, 0xf0 };
   
-  // (Add your actual bitmaps here for each number and AM/PM)
+
   switch (digit) {
     case 0: return zeroBitmap;
     case 1: return oneBitmap;
